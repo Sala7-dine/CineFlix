@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+:root {
+  --marquee-width: 80vw;
+  --marquee-height: 60vh;
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  /* background-color: #111; */
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+}
+.marquee:before, .marquee:after {
+  position: absolute;
+  top: 0;
+  width: 20rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+.item{
+    width: 600px;
+    height: 400px;
+}
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+  white-space: nowrap;
+}
+
+.marquee-content li img {
+  width: 100%;
+  /* height: 100%; */
+  border: 2px solid #eee;
+}
+
+@media (max-width: 600px) {
+  html { font-size: 12px; }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+  .marquee:before, .marquee:after { width: 5rem; }
+}
+   </style>
+</head>
+<body>
+
+    <header class='flex py-4 px-2 sm:px-10 bg-transparent absolute font-[sans-serif] min tracking-wide z-50 w-full'>
+        <div class='flex flex-wrap items-center justify-between gap-5 w-full'>
+          <a href="javascript:void(0)"><img src="../images/dark-logo.svg" alt="logo" class='w-36' />
+          </a>
+      
+          <div id="collapseMenu"
+            class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+            <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                <path
+                  d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                  data-original="#000000"></path>
+                <path
+                  d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                  data-original="#000000"></path>
+              </svg>
+            </button>
+      
+            <ul
+              class='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+              <li class='mb-6 hidden max-lg:block'>
+                <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-36' />
+                </a>
+              </li>
+              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
+                <a href='javascript:void(0)'
+                  class='hover:text-[#f97316] text-[#f97316] block font-semibold text-[15px]'>Home</a>
+              </li>
+              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
+                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Favorite</a>
+              </li>
+              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
+                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Category</a>
+              </li>
+              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
+                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Blog</a>
+              </li>
+            </ul>
+          </div>
+      
+          <div class='flex max-lg:ml-auto space-x-3'>
+            <button
+              class='px-6 py-2 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]'>Premuim</button>
+      
+            <button id="toggleOpen" class='lg:hidden'>
+              <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+    </header>
+    
+
+    <section class="w-full flex justify-center items-center h-screen p-24 relative bg-black ">
+        <div>
+            <img class="absolute right-0 bottom-0 min-w-full min-h-full opacity-40" src="../images/bg1.png" alt="">
+        </div>
+
+        <div class="absolute flex flex-col gap-6 justify-center items-center">
+            <h1 class="text-white text-[60px] font-extrabold text-center leading-tight"> Films et séries en <br>
+                illimité, et bien plus</h1>
+
+            <p class="text-white text-[20px] text-center">Discover a world of movies, from the latest blockbusters <br>
+                to timeless classics, all in one place.</p>
+
+            <button class=' px-6 py-2 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]'>whatch now</button>
+        </div>
+
+
+    </section>
+
+
+    <section class="w-full h-screen py-4 px-24">
+
+        <div class="flex flex-col w-11/12">
+            <div class="flex justify-between py-6">
+                <h1 class="text-black text-[22px] font-semibold">Latest Movies</h1>
+                <h1 class="text-black text-[22px] font-semibold">View All</h1>
+            </div>
+
+            <hr>
+        </div>
+        
+    <!-- <div id="wrapper" class="w-full max-w-4xl relative m-auto">
+        <div id="carousel" class="overflow-auto scroll-smooth	">
+          <div id="content">
+            <img
+              class="item"
+              src="../images/mv1.jpg"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              class="item"
+              src="../images/mv1.jpg"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+            <img
+              src="../images/mv1.jpg"
+              class="item"
+            />
+          </div>
+        </div>
+  
+        <button id="prev" class="
+                      flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
+                      translate-x-2/4	translate-y-2/4	top-2/4 left-0
+        ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+          </svg>
+        </button>
+  
+        <button id="next" class="flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
+                                  translate-x-2/4	translate-y-2/4	top-2/4 right-10
+        ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+          </svg>
+        </button>
+      </div>
+   -->
+
+
+   <div class="marquee">
+    
+    <button id="prev" class="
+                      flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
+                      translate-x-2/4	translate-y-2/4	top-40 left-0 z-50
+        ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+          </svg>
+        </button>
+  
+        <button id="next" class="flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
+                                  translate-x-2/4	translate-y-2/4	top-40 right-10 z-50
+        ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+          </svg>
+        </button>
+    <ul class="marquee-content">
+      <li><img src="../images/mv1.jpg" class="item" /></li>
+      <li><img src="../images/mv2.jpg" class="item" /></li>
+      <li><img src="../images/mv3.jpg" class="item" /></li>
+      <li><img src="../images/mv4.jpg" class="item" /></li>
+      <li><img src="../images/mv5.jpg" class="item" /></li>
+      <li><img src="../images/mv6.jpg" class="item" /></li>
+      <li><img src="../images/mv7.jpg" class="item" /></li>
+      <li><img src="../images/mv8.jpg" class="item" /></li>
+      <li><img src="../images/mv1.jpg" class="item" /></li>
+      <li><img src="../images/mv2.jpg" class="item" /></li>
+      <li><img src="../images/mv3.jpg" class="item" /></li>
+      <li><img src="../images/mv4.jpg" class="item" /></li>
+      <li><img src="../images/mv5.jpg" class="item" /></li>
+      <li><img src="../images/mv6.jpg" class="item" /></li>
+      <li><img src="../images/mv7.jpg" class="item" /></li>
+      <li><img src="../images/mv8.jpg" class="item" /></li>
+      <li><img src="../images/mv1.jpg" class="item" /></li>
+      <li><img src="../images/mv2.jpg" class="item" /></li>
+      <li><img src="../images/mv3.jpg" class="item" /></li>
+      <li><img src="../images/mv4.jpg" class="item" /></li>
+      <li><img src="../images/mv5.jpg" class="item" /></li>
+      <li><img src="../images/mv6.jpg" class="item" /></li>
+      <li><img src="../images/mv7.jpg" class="item" /></li>
+      <li><img src="../images/mv8.jpg" class="item" /></li>
+    </ul>
+    <li><img src="../images/mv1.jpg" class="item" /></li>
+  </div>
+    </section>
+
+<!-- 
+  <script>
+const gap = 16;
+
+    const carousel = document.getElementById("carousel"),
+    content = document.getElementById("content"),
+    next = document.getElementById("next"),
+    prev = document.getElementById("prev");
+
+    next.addEventListener("click", e => {
+    carousel.scrollBy(width + gap, 0);
+
+    });
+    prev.addEventListener("click", e => {
+    carousel.scrollBy(-(width + gap), 0);
+    });
+
+    let width = carousel.offsetWidth;
+    window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+
+
+
+  </script> -->
+
+
+
+  <script>
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+
+    for(let i=0; i<marqueeElementsDisplayed; i++) {
+    marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+  </script>
+
+
+      <script>
+
+        var toggleOpen = document.getElementById('toggleOpen');
+        var toggleClose = document.getElementById('toggleClose');
+        var collapseMenu = document.getElementById('collapseMenu');
+
+        function handleClick() {
+        if (collapseMenu.style.display === 'block') {
+            collapseMenu.style.display = 'none';
+        } else {
+            collapseMenu.style.display = 'block';
+        }
+        }
+
+        toggleOpen.addEventListener('click', handleClick);
+        toggleClose.addEventListener('click', handleClick);
+
+        
+
+      </script>
+</body>
+</html>
