@@ -9,78 +9,78 @@
    <style>
     @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+    :root {
+      --marquee-width: 80vw;
+      --marquee-height: 60vh;
+      --marquee-elements-displayed: 5;
+      --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+      --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    }
 
-:root {
-  --marquee-width: 80vw;
-  --marquee-height: 60vh;
-  --marquee-elements-displayed: 5;
-  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
-}
+    .marquee {
+      width: var(--marquee-width);
+      height: var(--marquee-height);
+      /* background-color: #111; */
+      color: #eee;
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee:before, .marquee:after {
+      position: absolute;
+      top: 0;
+      width: 20rem;
+      height: 100%;
+      content: "";
+      z-index: 1;
+    }
 
-.marquee {
-  width: var(--marquee-width);
-  height: var(--marquee-height);
-  /* background-color: #111; */
-  color: #eee;
-  overflow: hidden;
-  position: relative;
-}
-.marquee:before, .marquee:after {
-  position: absolute;
-  top: 0;
-  width: 20rem;
-  height: 100%;
-  content: "";
-  z-index: 1;
-}
+    .marquee-content {
+      list-style: none;
+      height: 100%;
+      display: flex;
+      animation: scrolling var(--marquee-animation-duration) linear infinite;
+    }
+    .item{
+        width: 600px;
+        height: 400px;
+    }
+    /* .marquee-content:hover {
+      animation-play-state: paused;
+    } */
+    @keyframes scrolling {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+    }
 
-.marquee-content {
-  list-style: none;
-  height: 100%;
-  display: flex;
-  animation: scrolling var(--marquee-animation-duration) linear infinite;
-}
-.item{
-    width: 600px;
-    height: 400px;
-}
-/* .marquee-content:hover {
-  animation-play-state: paused;
-} */
-@keyframes scrolling {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
-}
+    .marquee-content li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* text-align: center; */
+      flex-shrink: 0;
+      width: var(--marquee-element-width);
+      max-height: 100%;
+      font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+      white-space: nowrap;
+    }
 
-.marquee-content li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* text-align: center; */
-  flex-shrink: 0;
-  width: var(--marquee-element-width);
-  max-height: 100%;
-  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
-  white-space: nowrap;
-}
+    .marquee-content li img {
+      width: 100%;
+      /* height: 100%; */
+      border: 2px solid #eee;
+    }
 
-.marquee-content li img {
-  width: 100%;
-  /* height: 100%; */
-  border: 2px solid #eee;
-}
-
-@media (max-width: 600px) {
-  html { font-size: 12px; }
-  :root {
-    --marquee-width: 100vw;
-    --marquee-height: 16vh;
-    --marquee-elements-displayed: 3;
-  }
-  .marquee:before, .marquee:after { width: 5rem; }
-}
+    @media (max-width: 600px) {
+      html { font-size: 12px; }
+      :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+      }
+      .marquee:before, .marquee:after { width: 5rem; }
+    }
    </style>
+
 </head>
 <body>
 
@@ -105,15 +105,15 @@
             <ul
               class='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
               <li class='mb-6 hidden max-lg:block'>
-                <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-36' />
+                <a href="javascript:void(0)"><img src="../images/light-logo.svg" alt="logo" class='w-36' />
                 </a>
               </li>
               <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
                 <a href='javascript:void(0)'
-                  class='hover:text-[#f97316] text-[#f97316] block font-semibold text-[15px]'>Home</a>
+                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Home</a>
               </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
-                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Favorite</a>
+              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='detailePage.html'
+                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Favorite </a>
               </li>
               <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
                   class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Category</a>
@@ -350,16 +350,16 @@
   </section>
 
 
-  <div class="relative bg-gradient-to-r from-black to-black py-16 mx-24 font-[sans-serif]">
-    <div class="absolute inset-0">
-      <img src="../images/phone-banner.jpg" alt="Background Image" class="w-full h-full object-cover opacity-50" />
-    </div>
+    <div class="relative bg-gradient-to-r from-black to-black py-16 mx-24 font-[sans-serif]">
+      <div class="absolute inset-0">
+        <img src="../images/phone-banner.jpg" alt="Background Image" class="w-full h-full object-cover opacity-50" />
+      </div>
 
-    <div class="relative flex justify-between max-w-screen-xl mx-auto px-8 z-10 text-center text-white">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Download App</h1>
-      <button type="button" class="px-20 h-14 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]">Download</button>
+      <div class="relative flex justify-between max-w-screen-xl mx-auto px-8 z-10 text-center text-white">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Download App</h1>
+        <button type="button" class="px-20 h-14 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]">Download</button>
+      </div>
     </div>
-  </div>
 
 
   <section class="w-full flex flex-col items-center px-10  gap-y-12 min-h-screen">
@@ -535,30 +535,25 @@
           </div>
         </div>
 
-        <div class="flex flex-col justify-start movie-card">
-          <img src="../images/mv1.jpg" class="w-72"/>
-          <div class="py-2">
-            
-            <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">Dom (2005)</h3>
-              <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
-                  <path
-                    d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
-                    data-original="#000000"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
     </div>  
 
 
 </section>
 
+<div class="relative bg-gradient-to-r from-black to-black py-16 mx-24 my-24 font-[sans-serif]">
+  <div class="absolute inset-0">
+    <img src="../images/phone-banner.jpg" alt="Background Image" class="w-full h-full object-cover opacity-50" />
+  </div>
 
-<footer class="bg-[#1e1406] py-12 px-6 font-sans tracking-wide z-50">
+  <div class="relative flex justify-between max-w-screen-xl mx-auto px-8 z-10 text-center text-white">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Download App</h1>
+    <button type="button" class="px-20 h-14 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]">Download</button>
+  </div>
+</div>
+
+<footer class="bg-[#000000] py-12 px-6 font-sans tracking-wide z-50">
   <div class="flex flex-col items-center gap-6">
 
     <ul class="flex flex-wrap justify-center gap-x-7 gap-4">
@@ -619,7 +614,7 @@
           marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
       }
 
-    
+
       function Search(){
         var input = document.getElementById("search-bar");
         var filter = input.value.toLowerCase();
@@ -651,7 +646,7 @@
             collapseMenu.style.display = 'none';
         } else {
             collapseMenu.style.display = 'block';
-        }
+          }
         }
 
         toggleOpen.addEventListener('click', handleClick);
