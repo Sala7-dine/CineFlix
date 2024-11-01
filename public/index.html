@@ -82,7 +82,7 @@
    </style>
 
 </head>
-<body>
+<body class="bg-white dark:bg-[#0f0a06]">
 
     <header class='flex py-4 px-2 sm:px-10 bg-transparent absolute font-[sans-serif] min tracking-wide z-50 w-full'>
         <div class='flex flex-wrap items-center justify-between gap-5 w-full'>
@@ -103,23 +103,23 @@
             </button>
       
             <ul
-              class='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+              class='max-lg:bg-black lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
               <li class='mb-6 hidden max-lg:block'>
-                <a href="javascript:void(0)"><img src="../images/light-logo.svg" alt="logo" class='w-36' />
+                <a href="javascript:void(0)"><img src="../images/dark-logo.svg" alt="logo" class='w-36' />
                 </a>
               </li>
               <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
                 <a href='javascript:void(0)'
-                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Home</a>
+                  class='hover:text-[#f97316 text-white block font-semibold text-[15px]'>Home</a>
+              </li>
+              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='favorit.html'
+                  class='hover:text-[#f97316 text-white block font-semibold text-[15px]'>Favorite </a>
               </li>
               <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='detailePage.html'
-                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Favorite </a>
+                  class='hover:text-[#f97316 text-white block font-semibold text-[15px]'>Category</a>
               </li>
               <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
-                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Category</a>
-              </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
-                  class='hover:text-[#f97316] text-white block font-semibold text-[15px]'>Blog</a>
+                  class='hover:text-[#f97316 text-white block font-semibold text-[15px]'>Blog</a>
               </li>
             </ul>
           </div>
@@ -142,14 +142,14 @@
 
     <section class="w-full flex justify-center items-center h-screen p-24 relative bg-black ">
         <div>
-            <img class="absolute right-0 bottom-0 min-w-full min-h-full opacity-40" src="../images/bg1.png" alt="">
+            <img class="absolute right-0 bottom-0 object-cover min-w-full min-h-full opacity-40" src="../images/bg1.png" alt="">
         </div>
 
         <div class="absolute flex flex-col gap-6 justify-center items-center">
-            <h1 class="text-white text-[60px] font-extrabold text-center leading-tight"> Films et séries en <br>
+            <h1 class="text-white text-[60px] font-extrabold text-center leading-tight max-md:text-[40px]"> Films et séries en <br>
                 illimité, et bien plus</h1>
 
-            <p class="text-white text-[20px] text-center">Discover a world of movies, from the latest blockbusters <br>
+            <p class="text-white text-[20px] text-center max-md:text-[18px]">Discover a world of movies, from the latest blockbusters <br>
                 to timeless classics, all in one place.</p>
 
             <button class=' px-6 py-2 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]'>whatch now</button>
@@ -163,130 +163,12 @@
 
         <div class="flex flex-col w-11/12 py-9">
             <div class="flex justify-between py-6">
-                <h1 class="text-black text-[22px] font-semibold">Latest Movies</h1>
-                <h1 class="text-black text-[22px] font-semibold">View All</h1>
+                <h1 class="text-black dark:text-white text-[22px] font-semibold">Latest Movies</h1>
+                <h1 class="text-black dark:text-white text-[22px] font-semibold">View All</h1>
             </div>
 
             <hr>
         </div>
-        
-    <!-- <div id="wrapper" class="w-full max-w-4xl relative m-auto">
-        <div id="carousel" class="overflow-auto scroll-smooth	">
-          <div id="content">
-            <img
-              class="item"
-              src="../images/mv1.jpg"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              class="item"
-              src="../images/mv1.jpg"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-          </div>
-        </div>
-  
-        <button id="prev" class="
-                      flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
-                      translate-x-2/4	translate-y-2/4	top-2/4 left-0
-        ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-          </svg>
-        </button>
-  
-        <button id="next" class="flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
-                                  translate-x-2/4	translate-y-2/4	top-2/4 right-10
-        ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-          </svg>
-        </button>
-      </div>
-   -->
-
 
    <div class="marquee">
     
@@ -367,7 +249,7 @@
     <!-- Title -->
     <div class="w-11/12 py-9">
         <div class="flex justify-between py-6">
-            <h1 class="text-black text-[22px] font-semibold">Movies</h1>
+            <h1 class="text-black dark:text-white text-[22px] font-semibold">Movies</h1>
         </div>
 
         <hr>
@@ -376,7 +258,7 @@
     <!-- Search Bar -->
     
     <div class="flex justify-between px-14 w-full">
-      <div class="flex px-4 py-3 rounded-md border-2 border-black w-2/6 overflow-hidden max-w-md font-[sans-serif]">
+      <div class="flex px-4 py-3 rounded-md border-2 border-black dark:border-white dark:border-[0.5px] w-2/6 overflow-hidden max-w-md font-[sans-serif]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
           class="fill-gray-600 mr-3 rotate-90">
           <path
@@ -397,14 +279,13 @@
     </div>
 
     <!-- Movies Cards -->
-    <div class=" m-auto flex flex-wrap justify-evenly gap-y-10" id="movies">
+    <div class="m-auto flex flex-wrap justify-evenly gap-y-10" id="movies">
 
         <div class="flex flex-col justify-start movie-card">
           <img src="../images/mv1.jpg" class="w-72"/>
           <div class="py-2">
-            
             <div class="flex items-center justify-between" >
-              <h3 class="text-lg text-gray-800 font-semibold">War is Coming (2022)</h3>
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">War is Coming (2022)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -419,9 +300,9 @@
         <div class="flex flex-col justify-start movie-card">
           <img src="../images/mv2.jpg" class="w-72"/>
           <div class="py-2">
-            
             <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">Harry Potter (2005)</h3>
+              
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Harry Potter (2005)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -438,7 +319,7 @@
           <div class="py-2">
             
             <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">Game Of Thronse (2021)</h3>
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Game Of Thronse (2021)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -455,7 +336,7 @@
           <div class="py-2">
             
             <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">See (2015)</h3>
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">See (2015)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -472,7 +353,7 @@
           <div class="py-2">
             
             <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">Jocker (2011)</h3>
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Jocker (2011)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -489,7 +370,7 @@
           <div class="py-2">
             
             <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">The Hotel (2024)</h3>
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">The Hotel (2024)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -506,7 +387,7 @@
           <div class="py-2">
             
             <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">War Man (2016)</h3>
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">War Man (2016)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -523,7 +404,7 @@
           <div class="py-2">
             
             <div class="flex items-center justify-between">
-              <h3 class="text-lg text-gray-800 font-semibold">Baba Ali (2001)</h3>
+              <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Baba Ali (2001)</h3>
               <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                   <path
@@ -534,10 +415,12 @@
             </div>
           </div>
         </div>
-
-        
-
     </div>  
+
+
+
+
+    <!-- <span class="fixed bottom-8 right-8 bg-orange-500 text-center rounded-full px-3 py-2"><i class="fa fa-certificate" style="font-size:25px;color:white;" id="toggle"></i></span> -->
 
 
 </section>
@@ -603,6 +486,28 @@
 
 
     <script>
+
+
+
+// var toggle = document.getElementById("toggle");
+//       var mode = document.body.getAttribute("data-theme")
+
+//       toggle.addEventListener("click" , () => {
+
+//           if(mode === "light"){
+//             console.log('hhh');
+//             document.documentElement.classList.remove("dark");
+//           }else{
+//             console.log('hihih');
+//             document.documentElement.classList.add("light");
+//           }
+          
+
+//       })
+      
+      
+      
+
       const root = document.documentElement;
       const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
       const marqueeContent = document.querySelector("ul.marquee-content");
@@ -626,11 +531,45 @@
           var txtValue = h.innerText;
           if (txtValue.toLowerCase().indexOf(filter) > -1){
               card[i].style.display = "";
-          } else {
+          } else {a
               card[i].style.display = "none";
           }
         }        
       }
+
+
+
+
+
+
+      let card_movies = document.querySelectorAll(".movie-card");
+
+
+      let TableCards = [];
+
+      card_movies.forEach((card,index) => {
+          let favorit = card.querySelector("svg");
+          favorit.addEventListener("click" , (e) => {
+
+            TableCards.push(card.outerHTML);
+            var localstr = localStorage.getItem("cards");
+            console.log(localstr);
+
+            if(localstr !== null){
+              localstr += TableCards;
+              localStorage.setItem("cards" , localstr);
+            }else{
+              localStorage.setItem("cards" , TableCards);
+            }
+           
+          })
+      });
+
+
+
+
+
+
 
 
     </script>
