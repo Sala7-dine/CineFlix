@@ -204,7 +204,7 @@ function Search(){
     var filter = input.value.toLowerCase();
 
     for (i = 0; i < card.length; i++) {
-      var h = card[i].getElementsByTagName("h3")[0];
+      var h = card[i].getElementsByTagName("a")[0];
       var txtValue = h.innerText;
       if (txtValue.toLowerCase().indexOf(filter) > -1){
           card[i].style.display = "";
@@ -232,7 +232,7 @@ if(localStorage.getItem("cards") !== null){
 card_movies.forEach((card,index) => {
     let favorit = card.querySelector("svg");
     let path = card.querySelector("img").src;
-    let title = card.querySelector("h3").textContent;
+    let title = card.querySelector("a").textContent;
     favorit.addEventListener("click" , (e) => {
         let Tab = [];
         Tab.push(path);

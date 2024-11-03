@@ -81,7 +81,7 @@ for(let i=0;i<card_movies.length;i++){
     let favorit = card_movies[i].querySelector('#close');
     
     favorit.addEventListener("click" , ()=>{
-        let parent = favorit.parentElement.querySelector("h3").textContent;
+        let parent = favorit.parentElement.querySelector("a").textContent;
         favorit.parentElement.style.display = "none"
 
         console.log(storedNames);
