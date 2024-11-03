@@ -7,81 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat');
-    
-    
-    :root {
-      --marquee-width: 80vw;
-      --marquee-height: 60vh;
-      --marquee-elements-displayed: 5;
-      --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-      --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
-    }
-    
-    .marquee {
-      width: var(--marquee-width);
-      height: var(--marquee-height);
-      /* background-color: #111; */
-      color: #eee;
-      overflow: hidden;
-      position: relative;
-    }
-    .marquee:before, .marquee:after {
-      position: absolute;
-      top: 0;
-      width: 20rem;
-      height: 100%;
-      content: "";
-      z-index: 1;
-    }
-    
-    .marquee-content {
-      list-style: none;
-      height: 100%;
-      display: flex;
-      animation: scrolling var(--marquee-animation-duration) linear infinite;
-    }
-    .item{
-        width: 600px;
-        height: 400px;
-    }
-    /* .marquee-content:hover {
-      animation-play-state: paused;
-    } */
-    @keyframes scrolling {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
-    }
-    
-    .marquee-content li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* text-align: center; */
-      flex-shrink: 0;
-      width: var(--marquee-element-width);
-      max-height: 100%;
-      font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
-      white-space: nowrap;
-    }
-    
-    .marquee-content li img {
-      width: 100%;
-      /* height: 100%; */
-      border: 2px solid #eee;
-    }
-    
-    @media (max-width: 600px) {
-      html { font-size: 12px; }
-      :root {
-        --marquee-width: 100vw;
-        --marquee-height: 16vh;
-        --marquee-elements-displayed: 3;
-      }
-      .marquee:before, .marquee:after { width: 5rem; }
-    }
-       </style>
 
 <body class="bg-white dark:bg-[#0f0a06]">
 
@@ -161,10 +86,9 @@
 
 
         <div class="w-full flex flex-wrap justify-evenly gap-y-10 min-h-screen" id="movies">
-    
 
-            
-    
+        
+        
         </div>  
 
     </section>
@@ -181,6 +105,9 @@
       <button type="button" class="px-20 h-14 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]">Download</button>
     </div>
   </div>
+
+  <span class="fixed bottom-8 right-8 bg-orange-500 flex justify-center items-center rounded-full w-12 h-12" id="mode"><i class="fa fa-certificate" style="font-size:20px;color:white;" id="toggle"></i></span>
+
 
 
 
@@ -233,111 +160,7 @@
   </footer>
   
 
-      <script>
+  <script src="favorit.js"></script>
 
-        // var btn_like = document.getElementById("like-btn");
-        // var counter = document.getElementById("counter");
-        // var textComment = document.getElementById("textComment");
-        // var commentBtn = document.getElementById("commentBtn");
-        // var commentDiv = document.getElementById("commentDiv"); 
-
-        // commentBtn.addEventListener('click' , function(){
-        //     console.log(textComment.value);
-        //     var commentValue = document.createElement("div");
-
-        //     commentValue.className = "w-4/5 border-2 border-gray-100 p-6 text-[#333] font-[sans-serif] rounded-md my-2";
-        //     commentValue.innerHTML = `<div class="mt-6 space-y-10">
-        //       <div class="flex items-start">
-        //         <img src="https://readymadeui.com/team-2.webp" class="w-12 h-12 rounded-full border-2 border-white" />
-        //         <div class="ml-3">
-        //           <h4 class="text-sm font-bold">vous</h4>
-        //           <div class="flex space-x-1 mt-1">
-        //             <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-        //               xmlns="http://www.w3.org/2000/svg">
-        //               <path
-        //                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-        //             </svg>
-        //             <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-        //               xmlns="http://www.w3.org/2000/svg">
-        //               <path
-        //                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-        //             </svg>
-        //             <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-        //               xmlns="http://www.w3.org/2000/svg">
-        //               <path
-        //                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-        //             </svg>
-        //             <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-        //               xmlns="http://www.w3.org/2000/svg">
-        //               <path
-        //                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-        //             </svg>
-        //             <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-        //               xmlns="http://www.w3.org/2000/svg">
-        //               <path
-        //                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-        //             </svg>
-        //             <p class="text-xs !ml-2 font-semibold">Now</p>
-        //           </div>
-        //           <p class="text-xs mt-3"> ${textComment.value}</p>
-        //         </div>
-        //       </div>
-        //     </div>`
-        
-        //     commentDiv.appendChild(commentValue);
-
-        //     textComment.value = "";
-        // });
-
-
-        // btn_like.addEventListener("click" , function(){
-        //     var content = counter.textContent;
-        //     var i = 1;
-        //     counter.innerHTML = Number(content) + i;
-        // })
-
-
-
-
-        var movies = document.getElementById("movies");
-
-
-        var storedNames = localStorage.getItem("cards");
-
-        var array = storedNames.split(",");
-        
-        console.log(array);
-
-        array.forEach(card => {
-            movies.innerHTML += card;
-        })
-
-
-
-
-
-      </script>
-
-
-<script>
-
-    var toggleOpen = document.getElementById('toggleOpen');
-    var toggleClose = document.getElementById('toggleClose');
-    var collapseMenu = document.getElementById('collapseMenu');
-
-    function handleClick() {
-    if (collapseMenu.style.display === 'block') {
-        collapseMenu.style.display = 'none';
-    } else {
-        collapseMenu.style.display = 'block';
-    }
-    }
-
-    toggleOpen.addEventListener('click', handleClick);
-    toggleClose.addEventListener('click', handleClick);
-
-    
-
-  </script>
 </body>
 </html>

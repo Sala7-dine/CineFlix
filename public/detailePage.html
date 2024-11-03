@@ -7,81 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat');
-    
-    
-    :root {
-      --marquee-width: 80vw;
-      --marquee-height: 60vh;
-      --marquee-elements-displayed: 5;
-      --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-      --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
-    }
-    
-    .marquee {
-      width: var(--marquee-width);
-      height: var(--marquee-height);
-      /* background-color: #111; */
-      color: #eee;
-      overflow: hidden;
-      position: relative;
-    }
-    .marquee:before, .marquee:after {
-      position: absolute;
-      top: 0;
-      width: 20rem;
-      height: 100%;
-      content: "";
-      z-index: 1;
-    }
-    
-    .marquee-content {
-      list-style: none;
-      height: 100%;
-      display: flex;
-      animation: scrolling var(--marquee-animation-duration) linear infinite;
-    }
-    .item{
-        width: 600px;
-        height: 400px;
-    }
-    /* .marquee-content:hover {
-      animation-play-state: paused;
-    } */
-    @keyframes scrolling {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
-    }
-    
-    .marquee-content li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* text-align: center; */
-      flex-shrink: 0;
-      width: var(--marquee-element-width);
-      max-height: 100%;
-      font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
-      white-space: nowrap;
-    }
-    
-    .marquee-content li img {
-      width: 100%;
-      /* height: 100%; */
-      border: 2px solid #eee;
-    }
-    
-    @media (max-width: 600px) {
-      html { font-size: 12px; }
-      :root {
-        --marquee-width: 100vw;
-        --marquee-height: 16vh;
-        --marquee-elements-displayed: 3;
-      }
-      .marquee:before, .marquee:after { width: 5rem; }
-    }
-       </style>
 
 <body class="bg-white dark:bg-[#0f0a06]">
 
@@ -474,182 +399,178 @@
             <hr>
         </div>
         
-    <!-- <div id="wrapper" class="w-full max-w-4xl relative m-auto">
-        <div id="carousel" class="overflow-auto scroll-smooth	">
-          <div id="content">
-            <img
-              class="item"
-              src="../images/mv1.jpg"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              class="item"
-              src="../images/mv1.jpg"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
-            <img
-              src="../images/mv1.jpg"
-              class="item"
-            />
+        <div class="relative w-4/5">
+          
+          <button id="prev" class="
+          flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
+          translate-x-2/4	translate-y-2/4	top-40 left-0 z-50
+          ">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+          </svg>
+          </button>
+  
+          <button id="next" class="flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
+                                translate-x-2/4	translate-y-2/4	top-40 right-10 z-50
+          ">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+          </svg>
+          </button>
+
+          <div class="all-movies relative flex gap-5 overflow-hidden w-full">
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv1.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              <div class="flex items-center justify-between" >
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">War is Coming (2022)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
+  
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv2.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              <div class="flex items-center justify-between">
+                
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Harry Potter (2005)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv3.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Game Of Thronse (2021)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv4.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">See (2015)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv5.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Jocker (2011)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv6.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">The Hotel (2024)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv7.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">War Man (2016)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex flex-col justify-start movie-card">
+            <img src="../images/mv8.jpg" class="w-72"/>
+            <div class="py-2 w-72">
+              
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">Baba Ali (2001)</h3>
+                <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
+                    <path
+                      d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                      data-original="#000000"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
         </div>
-  
-        <button id="prev" class="
-                      flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
-                      translate-x-2/4	translate-y-2/4	top-2/4 left-0
-        ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-          </svg>
-        </button>
-  
-        <button id="next" class="flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
-                                  translate-x-2/4	translate-y-2/4	top-2/4 right-10
-        ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-          </svg>
-        </button>
-      </div>
-   -->
 
 
-   <div class="marquee">
-    
-    <button id="prev" class="
-                      flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
-                      translate-x-2/4	translate-y-2/4	top-40 left-0 z-50
-        ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-          </svg>
-        </button>
-  
-        <button id="next" class="flex justify-center content-center bg-white p-2 rounded-full outline-0 cursor-pointer absolute
-                                  translate-x-2/4	translate-y-2/4	top-40 right-10 z-50
-        ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-          </svg>
-        </button>
-    <ul class="marquee-content">
-      <li><img src="../images/mv1.jpg" class="item" /></li>
-      <li><img src="../images/mv2.jpg" class="item" /></li>
-      <li><img src="../images/mv3.jpg" class="item" /></li>
-      <li><img src="../images/mv4.jpg" class="item" /></li>
-      <li><img src="../images/mv5.jpg" class="item" /></li>
-      <li><img src="../images/mv6.jpg" class="item" /></li>
-      <li><img src="../images/mv7.jpg" class="item" /></li>
-      <li><img src="../images/mv8.jpg" class="item" /></li>
-      <li><img src="../images/mv1.jpg" class="item" /></li>
-      <li><img src="../images/mv2.jpg" class="item" /></li>
-      <li><img src="../images/mv3.jpg" class="item" /></li>
-      <li><img src="../images/mv4.jpg" class="item" /></li>
-      <li><img src="../images/mv5.jpg" class="item" /></li>
-      <li><img src="../images/mv6.jpg" class="item" /></li>
-      <li><img src="../images/mv7.jpg" class="item" /></li>
-      <li><img src="../images/mv8.jpg" class="item" /></li>
-      <li><img src="../images/mv1.jpg" class="item" /></li>
-      <li><img src="../images/mv2.jpg" class="item" /></li>
-      <li><img src="../images/mv3.jpg" class="item" /></li>
-      <li><img src="../images/mv4.jpg" class="item" /></li>
-      <li><img src="../images/mv5.jpg" class="item" /></li>
-      <li><img src="../images/mv6.jpg" class="item" /></li>
-      <li><img src="../images/mv7.jpg" class="item" /></li>
-      <li><img src="../images/mv8.jpg" class="item" /></li>
-    </ul>
-    <li><img src="../images/mv1.jpg" class="item" /></li>
-  </div>
 
   </section>
 
@@ -666,6 +587,7 @@
   </div>
 
 
+  <span class="fixed bottom-8 right-8 bg-orange-500 flex justify-center items-center rounded-full w-12 h-12" id="mode"><i class="fa fa-certificate" style="font-size:20px;color:white;" id="toggle"></i></span>
 
   <footer class="bg-[#000000] py-12 px-6 font-sans tracking-wide z-50">
     <div class="flex flex-col items-center gap-6">
@@ -716,92 +638,9 @@
   </footer>
   
 
-      <script>
-
-        var btn_like = document.getElementById("like-btn");
-        var counter = document.getElementById("counter");
-        var textComment = document.getElementById("textComment");
-        var commentBtn = document.getElementById("commentBtn");
-        var commentDiv = document.getElementById("commentDiv"); 
-
-        commentBtn.addEventListener('click' , function(){
-           
-            var commentValue = document.createElement("div");
-
-            commentValue.className = "w-4/5 border-2 border-gray-100 p-6 text-[#333] dark:text-white font-[sans-serif] rounded-md my-2";
-            commentValue.innerHTML = `<div class="mt-6 space-y-10">
-              <div class="flex items-start">
-                <img src="https://readymadeui.com/team-2.webp" class="w-12 h-12 rounded-full border-2 border-white" />
-                <div class="ml-3">
-                  <h4 class="text-sm font-bold">vous</h4>
-                  <div class="flex space-x-1 mt-1">
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <p class="text-xs !ml-2 font-semibold">Now</p>
-                  </div>
-                  <p class="text-xs mt-3"> ${textComment.value}</p>
-                </div>
-              </div>
-            </div>` 
-        
-            commentDiv.appendChild(commentValue);
-
-            textComment.value = "";
-        });
 
 
-        btn_like.addEventListener("click" , function(){
-            var content = counter.textContent;
-            var i = 1;
-            counter.innerHTML = Number(content) + i;
-        })
+  <script src="detail.js"></script>
 
-
-      </script>
-
-
-<script>
-
-    var toggleOpen = document.getElementById('toggleOpen');
-    var toggleClose = document.getElementById('toggleClose');
-    var collapseMenu = document.getElementById('collapseMenu');
-
-    function handleClick() {
-    if (collapseMenu.style.display === 'block') {
-        collapseMenu.style.display = 'none';
-    } else {
-        collapseMenu.style.display = 'block';
-    }
-    }
-
-    toggleOpen.addEventListener('click', handleClick);
-    toggleClose.addEventListener('click', handleClick);
-
-    
-
-  </script>
 </body>
 </html>
