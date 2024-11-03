@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-<body class="bg-white dark:bg-[#0f0a06]">
+<body class="bg-white dark:bg-black">
 
     <header class='flex py-4 px-2 sm:px-10 bg-white dark:bg-[#0f0a06] font-[sans-serif] min tracking-wide z-50 w-full'>
         <div class='flex flex-wrap items-center justify-between gap-5 w-full'>
@@ -41,7 +41,7 @@
               <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='favorit.html'
                 class='hover:text-[#f97316] text-black dark:text-white block font-semibold text-[15px]'>Favorite </a>
             </li>
-            <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='detailePage.html'
+            <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='#'
                 class='hover:text-[#f97316] text-black dark:text-white block font-semibold text-[15px]'>Category</a>
             </li>
               <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
@@ -74,11 +74,11 @@
     </section>
 
 
-    <div class="max-w-7xl max-md:max-w-xl mx-auto mt-32 font-[sans-]">
+    <section class="max-w-7xl max-md:max-w-xl mx-auto mt-32">
         
-        <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-12">
+        <div class="grid xl:grid-cols-3 md:grid-cols-2">
           <div class="flex flex-col items-center">
-            <img src="https://readymadeui.com/photo.webp" class="w-full rounded-md"  />
+            <img src="../images/mv6.jpg" class="w-80 rounded-md"  />
             <div>
                 <button
                     class='my-4 px-14 py-2 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]' id="like-btn">
@@ -101,30 +101,41 @@
             <div>
               <h2 class="text-gray-800 sm:text-3xl text-2xl font-extrabold dark:text-white">War is Coming</h2>
 
-              <div class="text-center mt-5 flex gap-5">
-                <div class="flex w-max space-x-2 py-3">
-                  <svg class="w-6 fill-[#ffea00]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                  </svg>
-                  <svg class="w-6 fill-[#ffea00]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                  </svg>
-                  <svg class="w-6 fill-[#ffea00]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                  </svg>
-                  <svg class="w-6 fill-[#ffea00]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                  </svg>
-                  <svg class="w-6 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                  </svg>
-                  <p class="text-xl font-semibold text-balck !ml-4 dark:text-white"><span class="text-orange-500">4.0</span> / 5 </p>
+              <div class=" flex items-center gap-5 py-2">
+                <!-- Rating -->
+                <div class="flex flex-row-reverse justify-end items-center">
+                  <input id="hs-ratings-readonly-1" type="radio" class="peer -ms-5 size-5 bg-transparent border-0 text-transparent cursor-pointer appearance-none checked:bg-none focus:bg-none focus:ring-0 focus:ring-offset-0" name="hs-ratings-readonly" value="1">
+                  <label for="hs-ratings-readonly-1" class="peer-checked:text-yellow-400 text-gray-300 pointer-events-none dark:peer-checked:text-yellow-600 dark:text-neutral-600">
+                    <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                    </svg>
+                  </label>
+                  <input id="hs-ratings-readonly-2" type="radio" class="peer -ms-5 size-5 bg-transparent border-0 text-transparent cursor-pointer appearance-none checked:bg-none focus:bg-none focus:ring-0 focus:ring-offset-0" name="hs-ratings-readonly" value="2">
+                  <label for="hs-ratings-readonly-2" class="peer-checked:text-yellow-400 text-gray-300 pointer-events-none dark:peer-checked:text-yellow-600 dark:text-neutral-600">
+                    <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                    </svg>
+                  </label>
+                  <input id="hs-ratings-readonly-3" type="radio" class="peer -ms-5 size-5 bg-transparent border-0 text-transparent cursor-pointer appearance-none checked:bg-none focus:bg-none focus:ring-0 focus:ring-offset-0" name="hs-ratings-readonly" value="3">
+                  <label for="hs-ratings-readonly-3" class="peer-checked:text-yellow-400 text-gray-300 pointer-events-none dark:peer-checked:text-yellow-600 dark:text-neutral-600">
+                    <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                    </svg>
+                  </label>
+                  <input id="hs-ratings-readonly-4" type="radio" class="peer -ms-5 size-5 bg-transparent border-0 text-transparent cursor-pointer appearance-none checked:bg-none focus:bg-none focus:ring-0 focus:ring-offset-0" name="hs-ratings-readonly" value="4">
+                  <label for="hs-ratings-readonly-4" class="peer-checked:text-yellow-400 text-gray-300 pointer-events-none dark:peer-checked:text-yellow-600 dark:text-neutral-600">
+                    <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                    </svg>
+                  </label>
+                  <input id="hs-ratings-readonly-5" type="radio" class="peer -ms-5 size-5 bg-transparent border-0 text-transparent cursor-pointer appearance-none checked:bg-none focus:bg-none focus:ring-0 focus:ring-offset-0" name="hs-ratings-readonly" value="5">
+                  <label for="hs-ratings-readonly-5" class="peer-checked:text-yellow-400 text-gray-300 pointer-events-none dark:peer-checked:text-yellow-600 dark:text-neutral-600">
+                    <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                    </svg>
+                  </label>
                 </div>
+                <!-- End Rating -->
 
 
                 <div class="flex w-max space-x-2 px-2 py-2 justify-center items-center">
@@ -138,23 +149,23 @@
             <hr>
             </div>
   
-            <div class="grid xl:grid-cols-1 sm:grid-cols-2 gap-4 mt-12 w-3/4">
+            <div class="grid xl:grid-cols-1 gap-4 mt-12 w-full">
 
-              <div class="flex items-center gap-3 justify-between w-4/6">
-                <div class="flex items-center gap-3">
+              <div class="flex items-center gap-3 justify-between w-4/6 max-md:w-full">
+                <div class="flex items-center gap-3 max-md:w-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" class="fill-green-500 shrink-0" viewBox="0 0 24 24">
                         <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000"></path>
                     </svg>
                     <h6 class="text-base text-gray-800 dark:text-white">Actor :</h6>
                 </div>
 
-                <div class="w-52">
+                <div class="w-52 max-md:w-full">
                     <p class="text-base text-gray-800 dark:text-white">Lorem ipsum dolor sit amet.</p> 
                 </div>
             </div>
 
 
-              <div class="flex items-center gap-3 justify-between w-4/6">
+              <div class="flex items-center gap-3 justify-between w-4/6 max-md:w-full">
                 <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" class="fill-green-500 shrink-0" viewBox="0 0 24 24">
                         <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000"></path>
@@ -168,7 +179,7 @@
             </div>
 
 
-            <div class="flex items-center gap-3 justify-between w-4/6">
+            <div class="flex items-center gap-3 justify-between w-4/6 max-md:w-full">
                 <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" class="fill-green-500 shrink-0" viewBox="0 0 24 24">
                         <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000"></path>
@@ -181,7 +192,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-3 justify-between w-4/6">
+            <div class="flex items-center gap-3 justify-between w-4/6 max-md:w-full">
                 <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" class="fill-green-500 shrink-0" viewBox="0 0 24 24">
                         <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000"></path>
@@ -194,7 +205,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-3 justify-between w-4/6">
+            <div class="flex items-center gap-3 justify-between w-4/6 max-md:w-full">
                 <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" class="fill-green-500 shrink-0" viewBox="0 0 24 24">
                         <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000"></path>
@@ -207,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-3 justify-between w-4/6">
+            <div class="flex items-center gap-3 justify-between w-4/6 max-md:w-full">
                 <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" class="fill-green-500 shrink-0" viewBox="0 0 24 24">
                         <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000"></path>
@@ -225,12 +236,12 @@
         </div>
       </div>   
 
-    </div>
+    </section>
 
 
-    <section class="flex flex-col justify-center items-center px-16">
+    <section class="flex flex-col justify-center items-center px-16 max-md:px-6">
          <!-- Title -->
-        <div class="w-11/12 py-9">
+        <div class="w-11/12 py-9 max-md:w-full">
             <div class="flex justify-between py-6">
                 <h1 class="text-black text-[22px] font-semibold dark:text-white">Overview</h1>
             </div>
@@ -238,13 +249,13 @@
             <hr>
         </div>
 
-        <p class="px-16 w-full text-xl leading-10 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque commodi eius debitis, laborum sapiente repudiandae natus deleniti officia impedit, animi maiores sint. Perferendis nam soluta illum recusandae quisquam, iste voluptate dicta culpa ab distinctio beatae vero repellat temporibus voluptates quas cum autem, obcaecati id ratione dolorum ea non quaerat quod?</p>
+        <p class="px-16 max-md:p-0 max-md:text-base w-full text-xl leading-10 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque commodi eius debitis, laborum sapiente repudiandae natus deleniti officia impedit, animi maiores sint. Perferendis nam soluta illum recusandae quisquam, iste voluptate dicta culpa ab distinctio beatae vero repellat temporibus voluptates quas cum autem, obcaecati id ratione dolorum ea non quaerat quod?</p>
     </section>
 
   
-    <section class="flex flex-col justify-center items-center px-16 min-h-screen">
+    <section class="flex flex-col justify-center items-center px-16 max-md:px-6 min-h-screen">
          <!-- Title -->
-        <div class="w-11/12 py-9">
+        <div class="w-11/12 py-9 max-md:w-full">
             <div class="flex justify-between py-6">
                 <h1 class="text-black text-[22px] font-semibold dark:text-white">Comments</h1>
             </div>
@@ -254,7 +265,7 @@
 
         <h3 class="font-bold text-base p-4 dark:text-white">All Reviews(4)</h3>
 
-        <div class="w-4/5" id="commentDiv">
+        <div class="w-full flex flex-col justify-center items-center" id="commentDiv">
             <div class="w-4/5 border-2 border-gray-100 p-6 text-[#333] dark:text-white font-[sans-serif] rounded-md my-2">
             <div class="mt-6 space-y-10">
               <div class="flex items-start">
@@ -289,87 +300,7 @@
                     </svg>
                     <p class="text-xs !ml-2 font-semibold">2 mins ago</p>
                   </div>
-                  <p class="text-xs mt-3">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.</p>
-                </div>
-              </div>
-            </div>
-         </div>
-        
-        <div class="w-4/5 border-2 border-gray-100 p-6 text-[#333] dark:text-white font-[sans-serif] rounded-md my-2">
-            <div class="mt-6 space-y-10">
-              <div class="flex items-start">
-                <img src="https://readymadeui.com/team-2.webp" class="w-12 h-12 rounded-full border-2 border-white" />
-                <div class="ml-3">
-                  <h4 class="text-sm font-bold">John Doe</h4>
-                  <div class="flex space-x-1 mt-1">
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <p class="text-xs !ml-2 font-semibold">2 mins ago</p>
-                  </div>
-                  <p class="text-xs mt-3">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.</p>
-                </div>
-              </div>
-            </div>
-         </div>
-
-        <div class="w-4/5 border-2 border-gray-100 p-6 text-[#333] dark:text-white font-[sans-serif] rounded-md my-2">
-            <div class="mt-6 space-y-10">
-              <div class="flex items-start">
-                <img src="https://readymadeui.com/team-2.webp" class="w-12 h-12 rounded-full border-2 border-white" />
-                <div class="ml-3">
-                  <h4 class="text-sm font-bold">John Doe</h4>
-                  <div class="flex space-x-1 mt-1">
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-                    </svg>
-                    <p class="text-xs !ml-2 font-semibold">2 mins ago</p>
-                  </div>
-                  <p class="text-xs mt-3">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.</p>
+                  <p class="text-base mt-3">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was .</p>
                 </div>
               </div>
             </div>
@@ -580,9 +511,9 @@
       <img src="../images/phone-banner.jpg" alt="Background Image" class="w-full h-full object-cover opacity-50" />
     </div>
 
-    <div class="relative flex justify-between max-w-screen-xl mx-auto px-8 z-10 text-center text-white">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Download App</h1>
-      <button type="button" class="px-20 h-14 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]">Download</button>
+    <div class="relative flex justify-between max-w-screen-xl max-md:block mx-auto px-8 z-10 text-center text-white">
+      <h1 class="text-[20px] md:text-5xl font-extrabold leading-tight mb-6 ">Download App</h1>
+      <button type="button" class="px-20 h-14 max-md:px-10 max-md:h-10 text-sm rounded-full font-bold text-white border-2 border-[#f97316] bg-[#f97316] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#f97316]">Download</button>
     </div>
   </div>
 

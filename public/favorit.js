@@ -51,7 +51,7 @@ function getCards(path , title){
             <div class="py-2 w-72">
               <div class="flex items-center justify-between">
                 
-                <h3 class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">${title}</h3>
+                  <a href='detailePage.html' class="text-lg text-gray-800 font-semibold underline hover:no-underline cursor-pointer dark:text-white">${title}</a>
                 <div class="w-12 h-12 flex items-center justify-center cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="fill-pink-600" viewBox="0 0 64 64">
                     <path

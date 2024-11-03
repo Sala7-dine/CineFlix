@@ -60,43 +60,43 @@ function AddComments(value){
 
     commentValue.className = "w-4/5 border-2 border-gray-100 p-6 text-[#333] dark:text-white font-[sans-serif] rounded-md my-2";
 
-    commentValue.innerHTML =  `<div class="mt-6 space-y-10">
-        <div class="flex items-start">
-        <img src="https://readymadeui.com/team-2.webp" class="w-12 h-12 rounded-full border-2 border-white" />
-        <div class="ml-3">
-            <h4 class="text-sm font-bold">vous</h4>
-            <div class="flex space-x-1 mt-1">
-            <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-            </svg>
-            <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-            </svg>
-            <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-            </svg>
-            <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-            </svg>
-            <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-            </svg>
-            <p class="text-xs !ml-2 font-semibold">Now</p>
-            </div>
-            <p class="text-xs mt-3"> ${value}</p>
-        </div>
-        </div>
-    </div>` 
+    commentValue.innerHTML =  `   <div class="mt-6 space-y-10">
+              <div class="flex items-start">
+                <img src="https://readymadeui.com/team-2.webp" class="w-12 h-12 rounded-full border-2 border-white" />
+                <div class="ml-3">
+                  <h4 class="text-sm font-bold">vous</h4>
+                  <div class="flex space-x-1 mt-1">
+                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                    </svg>
+                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                    </svg>
+                    <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                    </svg>
+                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                    </svg>
+                    <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                    </svg>
+                    <p class="text-xs !ml-2 font-semibold">2 mins ago</p>
+                  </div>
+                  <p class="text-base mt-3">${value}</p>
+                </div>
+              </div>
+            </div>` 
 
     return commentValue;
 }
