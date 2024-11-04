@@ -96,7 +96,6 @@ for(let i=0;i<card_movies.length;i++){
             }
         }
 
-
     });
 }
 

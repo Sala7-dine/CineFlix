@@ -1116,6 +1116,10 @@ video {
   fill: #db2777;
 }
 
+.fill-white {
+  fill: #fff;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1621,6 +1625,10 @@ video {
 @media not all and (min-width: 768px) {
   .max-md\:block {
     display: block;
+  }
+
+  .max-md\:hidden {
+    display: none;
   }
 
   .max-md\:h-10 {

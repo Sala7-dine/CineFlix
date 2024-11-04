@@ -237,10 +237,10 @@ card_movies.forEach((card,index) => {
         let Tab = [];
         Tab.push(path);
         Tab.push(title);
-        console.log(Tab);
+        console.log(TableCards);
         TableCards.push(Tab);
         console.log(TableCards);
         localStorage.setItem("cards" , JSON.stringify(TableCards));
-        alert("Le film a ete suavgarder avec succes !")
+        alert("Le film a ete suavgarder avec succes !");
     })
 });
