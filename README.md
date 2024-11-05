@@ -50,8 +50,7 @@ Le projet consiste à transformer le site web statique de CinéFlix en une plate
 
 ## 🪟 Lien le site web
 
- ```bash
-   https://sala7-dine.github.io/CineFlix/public/index.html
+https://sala7-dine.github.io/CineFlix/public/index.html
 
 
 
