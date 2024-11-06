@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/github/Sala7-dine/CineFlix.svg)](https://wakatime.com/badge/github/Sala7-dine/CineFlix)
+
 # 📁 Projet CinéFlix - Plateforme de Critiques de Films 🎬
 
 ## 🌟 Introduction
